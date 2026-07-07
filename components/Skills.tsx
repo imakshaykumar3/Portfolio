@@ -1,3 +1,4 @@
+// components/Skills.tsx
 import FadeIn from "@/components/FadeIn";
 import Badge from "@/components/ui/Badge";
 import { SKILLS } from "@/lib/data";

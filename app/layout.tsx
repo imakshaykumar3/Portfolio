@@ -1,3 +1,4 @@
+// app/layout.tsx
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
@@ -22,7 +23,7 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "500"],
 });
 
-const SITE_URL = "https://akshaykumar.dev"; // TODO: replace with your real deployed domain
+const SITE_URL = "https://akshaykumar.dev"; 
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

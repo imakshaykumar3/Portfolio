@@ -1,3 +1,4 @@
+// components/About.tsx
 import FadeIn from "@/components/FadeIn";
 import { EDUCATION } from "@/lib/data";
 

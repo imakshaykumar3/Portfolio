@@ -1,4 +1,5 @@
-import { Building2, Factory } from "lucide-react";
+// Components/Experience.tsx
+import { Building2, Component, Factory } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
 import Badge from "@/components/ui/Badge";
 import { EXPERIENCE } from "@/lib/data";

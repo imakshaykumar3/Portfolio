@@ -1,16 +1,7 @@
-// ─────────────────────────────────────────────────────────────────────────
-// All content below is transcribed directly from Akshay's resume.
-// Edit THIS FILE to update copy anywhere on the site — every section reads
-// from here, so there is a single source of truth.
-//
-// NOTE: The uploaded resume PDF listed "imakshaykumarx3@gmail.com" (with an
-// extra "x"), which doesn't match the GitHub/LinkedIn handle "imakshaykumar3".
-// This file uses the corrected handle-matching email. Double-check which one
-// is actually active before publishing, and swap CONTACT.email if needed.
-// ─────────────────────────────────────────────────────────────────────────
+// lib/data.ts
 
 export const PROFILE = {
-  name: "Akshay Kumar",
+  name: "AKSHAY KUMAR",
   roles: [
     "Software Developer",
     "AI Engineer",
@@ -20,7 +11,7 @@ export const PROFILE = {
     "Agentic AI Engineer",
   ],
   tagline:
-    "I design the reasoning layer and the plumbing underneath it — multi-agent systems that hold state, call real APIs, and stay up.",
+    "I build AI systems that move beyond demos architecting production-ready multi-agent workflows, scalable backend services, and retrieval pipelines that solve real engineering problems.",
   summary:
     "AI Platform & Backend Engineer with production internship experience at Virtusa and TATA Steel, specializing in Enterprise AI, LLM applications, RAG systems, agentic workflows, and scalable backend development with Python, FastAPI, LangChain, and LangGraph. Ranked 71st globally in TCS CodeVita among 146,922 participants. Grounded in DSA, OOP, and DBMS fundamentals.",
   location: "Bengaluru, India",

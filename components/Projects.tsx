@@ -1,6 +1,8 @@
+// Components/Projects.tsx
 import FadeIn from "@/components/FadeIn";
 import ProjectCard from "@/components/ProjectCard";
 import { PROJECTS } from "@/lib/data";
+import { Component } from "lucide-react";
 
 export default function Projects() {
   return (

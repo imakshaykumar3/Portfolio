@@ -1,3 +1,4 @@
+// components/Footer.tsx
 import { PROFILE } from "@/lib/data";
 
 export default function Footer() {

@@ -1,3 +1,4 @@
+// components/ui/Badge.tsx
 import type { ReactNode } from "react";
 import clsx from "clsx";
 

@@ -1,3 +1,4 @@
+// components/ProjectCard.tsx
 import { Github, ArrowUpRight } from "lucide-react";
 import Badge from "@/components/ui/Badge";
 import ArchitectureDiagram from "@/components/ArchitectureDiagram";

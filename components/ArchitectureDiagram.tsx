@@ -1,3 +1,4 @@
+// components/ArchitectureDiagram.tsx
 type NodeDef = { x: number; y: number; w: number; h: number; label: string; sub?: string; accent?: "blue" | "purple" | "cyan" };
 type EdgeDef = { from: [number, number]; to: [number, number]; label?: string; dashed?: boolean };
 

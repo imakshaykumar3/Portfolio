@@ -1,7 +1,8 @@
+// Components/Contact.tsx
 "use client";
 
 import { useState } from "react";
-import { Github, Linkedin, Copy, Check, MapPin, Code2 } from "lucide-react";
+import { Github, Linkedin, Copy, Check, MapPin, Code2, Component } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
 import Button from "@/components/ui/Button";
 import { CONTACT, PROFILE } from "@/lib/data";

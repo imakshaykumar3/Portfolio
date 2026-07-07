@@ -1,3 +1,4 @@
+// components/Achievements.tsx
 import { Trophy, Award, BadgeCheck } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
 import { ACHIEVEMENTS } from "@/lib/data";
