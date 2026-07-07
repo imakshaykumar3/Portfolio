@@ -34,7 +34,7 @@ export const NAV_LINKS = [
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
   { label: "Achievements", href: "#achievements" },
-  { label: "Contact", href: "#contact" },
+  { label: "Let's Connect", href: "#contact" },
 ];
 
 export const EXPERIENCE = [

@@ -24,7 +24,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-screen overflow-hidden flex items-center pt-20 pb-16 lg:pb-24"
+      className="relative min-h-screen overflow-hidden flex items-center pt-28 pb-16 lg:pb-24"
     >
       {/* BACKGROUND */}
       <div className="absolute inset-0">
