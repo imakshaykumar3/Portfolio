@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     siteName: "Akshay Kumar",
     images: [
       {
-        url: "/og-image.png",
+        url: "/logo.png",
         width: 1200,
         height: 630,
         alt: "Akshay Kumar — AI Platform & Backend Engineer",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     title: "Akshay Kumar — AI Platform & Backend Engineer",
     description:
       "Building production-grade agentic AI systems, RAG pipelines, and scalable backend infrastructure.",
-    images: ["/og-image.png"],
+    images: ["/logo.png"],
   },
   robots: {
     index: true,

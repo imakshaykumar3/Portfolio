@@ -183,26 +183,30 @@ export const SKILLS = [
 
 export const ACHIEVEMENTS = [
   {
+    tag: "Competitive Programming",
     title: "TCS CodeVita Season 13 — Global Rank 71",
+    logo: "images/tcs-logo.svg",
     description:
       "71st globally, top 0.05% among 146,922 participants, in the Guinness World Record-winning world's largest programming competition.",
-    tag: "Competitive Programming",
   },
   {
+    tag: "Hackathon",
     title: "IBM Expert Labs National Hackathon — Finalist",
+    logo: "images/ibm-logo.svg",
     description:
       "Shortlisted among the top teams from 200+ teams nationwide for developing an AI-powered cloud governance solution.",
-    tag: "Hackathon",
   },
   {
+    tag: "Certification",
     title: "Building Generative AI Applications using Amazon Bedrock",
+    logo: "images/aws-logo.svg",
     description: "AWS Training & Certifications.",
-    tag: "Certification",
   },
   {
+tag: "Certification",
     title: "Introduction to Large Language Models",
+    logo: "images/google-cloud.svg",
     description: "Google Cloud.",
-    tag: "Certification",
   },
 ];
 
