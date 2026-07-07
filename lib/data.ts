@@ -1,0 +1,223 @@
+// ─────────────────────────────────────────────────────────────────────────
+// All content below is transcribed directly from Akshay's resume.
+// Edit THIS FILE to update copy anywhere on the site — every section reads
+// from here, so there is a single source of truth.
+//
+// NOTE: The uploaded resume PDF listed "imakshaykumarx3@gmail.com" (with an
+// extra "x"), which doesn't match the GitHub/LinkedIn handle "imakshaykumar3".
+// This file uses the corrected handle-matching email. Double-check which one
+// is actually active before publishing, and swap CONTACT.email if needed.
+// ─────────────────────────────────────────────────────────────────────────
+
+export const PROFILE = {
+  name: "Akshay Kumar",
+  roles: [
+    "Software Developer",
+    "AI Engineer",
+    "Backend Engineer",
+    "Generative AI Engineer",
+    "LLM Engineer",
+    "Agentic AI Engineer",
+  ],
+  tagline:
+    "I design the reasoning layer and the plumbing underneath it — multi-agent systems that hold state, call real APIs, and stay up.",
+  summary:
+    "AI Platform & Backend Engineer with production internship experience at Virtusa and TATA Steel, specializing in Enterprise AI, LLM applications, RAG systems, agentic workflows, and scalable backend development with Python, FastAPI, LangChain, and LangGraph. Ranked 71st globally in TCS CodeVita among 146,922 participants. Grounded in DSA, OOP, and DBMS fundamentals.",
+  location: "Bengaluru, India",
+  availability: "Open to full-time AI/ML & Backend Engineering roles",
+};
+
+export const CONTACT = {
+  email: "imakshaykumarx3@gmail.com",
+  github: "https://github.com/imakshaykumar3",
+  githubHandle: "github.com/imakshaykumar3",
+  linkedin: "https://www.linkedin.com/in/imakshaykumar3",
+  linkedinHandle: "linkedin.com/in/imakshaykumar3",
+  codolio: "https://codolio.com/profile/akshaykumar",
+  codolioHandle: "codolio.com/profile/akshaykumar",
+};
+
+export const NAV_LINKS = [
+  { label: "About", href: "#about" },
+  { label: "Experience", href: "#experience" },
+  { label: "Projects", href: "#projects" },
+  { label: "Skills", href: "#skills" },
+  { label: "Achievements", href: "#achievements" },
+  { label: "Contact", href: "#contact" },
+];
+
+export const EXPERIENCE = [
+  {
+    company: "Virtusa",
+    role: "Agentic AI Engineer Intern",
+    location: "Hyderabad, Telangana",
+    period: "Mar 2026 – May 2026",
+    bullets: [
+      "Developed stateful multi-agent AI pipelines using LangGraph and LangChain to automate compliance monitoring and policy enforcement workflows, reducing manual review effort by 8+ hours per week.",
+      "Architected the generative AI reasoning layer of an agentic backend system, processing 500+ unstructured policy documents and reducing policy breach response time by 35% through risk-classified remediation workflows.",
+      "Built scalable FastAPI backend services for AI workflows with modular architecture, REST APIs, and Git-based development practices, improving maintainability and deployment readiness.",
+    ],
+    tech: ["LangGraph", "LangChain", "FastAPI", "Python", "REST APIs", "Git"],
+  },
+  {
+    company: "TATA Steel UISL",
+    role: "Artificial Intelligence Intern",
+    location: "Jamshedpur, Jharkhand",
+    period: "Jun 2025 – Jul 2025",
+    bullets: [
+      "Built and deployed a production-ready Automatic Vehicle Recognition System (AVRS) on AWS within Tata Steel's production network using YOLOv8 and PaddleOCR, enabling real-time license plate recognition with 90%+ accuracy for automated gate security access control.",
+      "Integrated the deployed inference pipeline with PostgreSQL to automate Employee vs. Visitor classification, reducing manual gate verification time by 40% and eliminating manual log entries across daily operations.",
+    ],
+    tech: ["YOLOv8", "PaddleOCR", "AWS", "PostgreSQL"],
+  },
+];
+
+export const PROJECTS = [
+  {
+    slug: "sarthi-ai",
+    name: "SARTHI.AI",
+    subtitle: "Autonomous Agentic Travel Orchestration Intelligence",
+    description:
+      "A stateful multi-agent travel planning system where a 13-node LangGraph StateGraph routes between specialist agents, checkpoints memory across server restarts, and streams live recommendations to the client as they're generated.",
+    tech: [
+      "Python",
+      "LangGraph",
+      "LangChain",
+      "FastAPI",
+      "GPT-4",
+      "Gemini",
+      "SQLite",
+      "SSE",
+      "Pydantic",
+    ],
+    bullets: [
+      "Orchestrated a stateful multi-agent travel system in LangGraph with a 13-node StateGraph and conditional routing, integrating AsyncSqliteSaver for checkpointing that persists memory across server reboots.",
+      "Engineered a scalable FastAPI microservice backend using Server-Sent Events (SSE), integrating Amadeus, Tavily, and Unsplash APIs with multi-LLM orchestration, structured outputs, and modular service design, enforcing structured outputs via Pydantic schemas and delivering sub-700ms response latency for live travel recommendations.",
+    ],
+    metrics: [
+      { value: "13", label: "StateGraph nodes" },
+      { value: "<700ms", label: "recommendation latency" },
+      { value: "2", label: "LLMs orchestrated" },
+    ],
+    diagram: "sarthi" as const,
+    github: "https://github.com/imakshaykumar3",
+  },
+  {
+    slug: "contextgpt",
+    name: "ContextGPT",
+    subtitle: "AI-Powered Meeting Intelligence Platform",
+    description:
+      "A RAG-grounded meeting intelligence platform that transcribes audio, video, and YouTube sources, indexes them into a semantic retrieval layer, and answers questions about a meeting through a JWT-secured API.",
+    tech: [
+      "Python",
+      "FastAPI",
+      "LangChain",
+      "ChromaDB",
+      "GPT models",
+      "Faster-Whisper",
+      "PostgreSQL",
+      "JWT",
+    ],
+    bullets: [
+      "Built a RAG-based meeting intelligence platform using Faster-Whisper for multi-modal transcription (audio, video, YouTube), reducing meeting note preparation time by 80% across 3 input modalities with a FastAPI pipeline.",
+      "Implemented a semantic retrieval layer using BAAI/bge-small-en-v1.5 embeddings in ChromaDB with LangChain-powered query rewriting and RAG-grounded answer generation, exposing JWT-secured REST APIs backed by PostgreSQL for session persistence.",
+    ],
+    metrics: [
+      { value: "80%", label: "less note-prep time" },
+      { value: "3", label: "input modalities" },
+      { value: "JWT", label: "secured API layer" },
+    ],
+    diagram: "contextgpt" as const,
+    github: "https://github.com/imakshaykumar3",
+  },
+];
+
+export const SKILLS = [
+  {
+    category: "Programming Languages",
+    items: ["Python", "Java", "SQL"],
+  },
+  {
+    category: "AI / ML",
+    items: [
+      "Machine Learning",
+      "Deep Learning",
+      "Generative AI",
+      "Transformers",
+      "Hugging Face",
+    ],
+  },
+  {
+    category: "LLMs & Agents",
+    items: [
+      "RAG",
+      "Agentic AI",
+      "AI Agents",
+      "Embeddings",
+      "LLM Evaluation",
+      "LangChain",
+      "LangGraph",
+      "Prompt Engineering",
+      "Orchestration",
+    ],
+  },
+  {
+    category: "Backend & APIs",
+    items: [
+      "FastAPI",
+      "REST APIs",
+      "Backend Development",
+      "Microservices",
+      "API Design",
+    ],
+  },
+  {
+    category: "Databases",
+    items: ["PostgreSQL", "MongoDB", "SQLite", "ChromaDB", "Pinecone"],
+  },
+  {
+    category: "Cloud & DevOps",
+    items: ["AWS", "Docker", "Git", "GitHub Actions"],
+  },
+  {
+    category: "Core CS",
+    items: [
+      "Data Structures & Algorithms",
+      "Object-Oriented Programming",
+      "DBMS",
+      "Computer Networks",
+    ],
+  },
+];
+
+export const ACHIEVEMENTS = [
+  {
+    title: "TCS CodeVita Season 13 — Global Rank 71",
+    description:
+      "71st globally, top 0.05% among 146,922 participants, in the Guinness World Record-winning world's largest programming competition.",
+    tag: "Competitive Programming",
+  },
+  {
+    title: "IBM Expert Labs National Hackathon — Finalist",
+    description:
+      "Shortlisted among the top teams from 200+ teams nationwide for developing an AI-powered cloud governance solution.",
+    tag: "Hackathon",
+  },
+  {
+    title: "Building Generative AI Applications using Amazon Bedrock",
+    description: "AWS Training & Certifications.",
+    tag: "Certification",
+  },
+  {
+    title: "Introduction to Large Language Models",
+    description: "Google Cloud.",
+    tag: "Certification",
+  },
+];
+
+export const EDUCATION = {
+  degree: "B.Tech, Computer Science & Engineering",
+  school: "Amity University, Ranchi, Jharkhand",
+  period: "Aug 2022 – Jun 2026",
+  gpa: "CGPA: 8.89 / 10.00",
+};
