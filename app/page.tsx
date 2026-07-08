@@ -8,6 +8,7 @@ import Achievements from "@/components/Achievements";
 import Contact from "@/components/Contact";
 // app/page.tsx
 import Footer from "@/components/Footer";
+import Certifications from "@/components/Certifications";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <Projects />
         <Skills />
         <Achievements />
+        <Certifications />
         <Contact />
       </main>
       <Footer />

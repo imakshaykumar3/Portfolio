@@ -34,6 +34,7 @@ export const NAV_LINKS = [
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
   { label: "Achievements", href: "#achievements" },
+  { label: "Certifications", href: "#certifications" }, 
   { label: "Let's Connect", href: "#contact" },
 ];
 
@@ -211,3 +212,48 @@ export const EDUCATION = {
   period: "Aug 2022 – Jun 2026",
   gpa: "CGPA: 8.89 / 10.00",
 };
+
+export const CERTIFICATIONS = [
+  {
+    title: "Building Generative AI Applications Using Amazon Bedrock",
+    issuer: "AWS Training & Certification",
+    date: "Jan 2026",
+    logo: "/images/aws-logo.svg",
+    description: "Earned certification for developing generative AI solutions using Amazon Bedrock.",
+  },
+  {
+    title: "Introduction to Large Language Models",
+    issuer: "Google Cloud",
+    date: "2026", // Update with your specific completion date
+    logo: "/images/google-cloud.svg", 
+    description: "Fundamental certification covering the core concepts, architecture, and use cases of Large Language Models.",
+  },
+  {
+    title: "Java (Basic) Skill Certification",
+    issuer: "HackerRank",
+    date: "Nov 2024",
+    logo: "/images/hackerrank-logo.png",
+    description: "Successfully passed the HackerRank skill certification test for foundational Java programming.",
+  },
+  {
+    title: "CSS (Basic) Skill Certification",
+    issuer: "HackerRank",
+    date: "Oct 2024",
+    logo: "/images/hackerrank-logo.png",
+    description: "Successfully passed the HackerRank skill certification test for foundational CSS design.",
+  },
+  {
+    title: "Programming in Java",
+    issuer: "NPTEL & IIT Kharagpur",
+    date: "Apr 2024",
+    logo: "/images/nptel-logo.jpeg",
+    description: "Completed the 12-week certification course funded by the MoE, Govt. of India.",
+  },
+  {
+    title: "Introduction to Database Systems",
+    issuer: "NPTEL & IIT Madras",
+    date: "Apr 2024",
+    logo: "/images/nptel-logo.jpeg",
+    description: "Completed the 12-week certification course funded by the MoE, Govt. of India.",
+  },
+];

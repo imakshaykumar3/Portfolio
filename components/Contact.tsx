@@ -31,7 +31,7 @@ export default function Contact() {
             <div className="mb-12 w-full">
               {/* Section Indicator */}
               <div className="mb-6 flex items-center gap-4">
-                <div className="h-[1px] w-12 bg-cyan-400/50"></div>
+                
                 <span className="text-sm font-mono font-semibold uppercase tracking-[0.2em] text-cyan-400">
                   Contacts
                 </span>
