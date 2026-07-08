@@ -21,7 +21,7 @@ export default function Contact() {
   return (
     <section 
       id="contact" 
-      className="py-12 md:py-16 border-t border-border bg-transparent" 
+      className="py-8 md:py-12 border-t border-border bg-transparent" 
     >
       <div className="section-container">
         <FadeIn>

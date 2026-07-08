@@ -185,29 +185,24 @@ export const ACHIEVEMENTS = [
   {
     tag: "Competitive Programming",
     title: "TCS CodeVita Season 13 — Global Rank 71",
-    logo: "images/tcs-logo.svg",
+    logo: "/images/tcs-logo.svg", // <-- Added leading slash
     description:
       "71st globally, top 0.05% among 146,922 participants, in the Guinness World Record-winning world's largest programming competition.",
   },
   {
     tag: "Hackathon",
     title: "IBM Expert Labs National Hackathon — Finalist",
-    logo: "images/ibm-logo.svg",
+    logo: "/images/ibm-logo.svg", // <-- Added leading slash
     description:
       "Shortlisted among the top teams from 200+ teams nationwide for developing an AI-powered cloud governance solution.",
   },
   {
-    tag: "Certification",
-    title: "Building Generative AI Applications using Amazon Bedrock",
-    logo: "images/aws-logo.svg",
-    description: "AWS Training & Certifications.",
-  },
-  {
-tag: "Certification",
-    title: "Introduction to Large Language Models",
-    logo: "images/google-cloud.svg",
-    description: "Google Cloud.",
-  },
+    title: "Smart India Hackathon 2024 — Internal Winner",
+    tag: "HACKATHON",
+    description:
+      "Emerged as the Winner for Team MahaDevs in the Software category of the Internal Hackathon for Smart India Hackathon 2024 at Amity University Jharkhand.",
+    logo: "/images/sih-logo.jpg", // <-- Added leading slash
+  }
 ];
 
 export const EDUCATION = {

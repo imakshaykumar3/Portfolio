@@ -24,7 +24,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-screen overflow-hidden flex items-center pt-28 pb-16 lg:pb-24"
+      className="relative min-h-screen overflow-hidden flex items-center pt-24 pb-16 lg:pb-24"
     >
       {/* BACKGROUND */}
       <div className="absolute inset-0">
@@ -79,7 +79,7 @@ export default function Hero() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="mt-8 max-w-2xl text-lg md:text-xl leading-relaxed text-secondary text-justify"
+                className="mt-6 max-w-2xl text-lg md:text-xl leading-relaxed text-secondary text-justify"
               >
                 I build production-grade{" "}
                 <span className="text-accent-cyan font-semibold">
@@ -103,7 +103,7 @@ export default function Hero() {
                 lg:flex
                 justify-center
                 self-center
-                pt-8
+                pt-6
               "
             >
               <HeroPhoto />
@@ -111,7 +111,7 @@ export default function Hero() {
           </div>
 
           {/* CTA BUTTONS */}
-          <div className="mt-10 md:mt-12 flex flex-wrap gap-2.5 xl:gap-3 items-center">
+          <div className="mt-0 md:mt-0 flex flex-wrap gap-2.5 xl:gap-3 items-center">
             <Button
               href="#projects"
               className="group px-5 xl:px-6 py-3.5 rounded-2xl text-sm xl:text-base shadow-xl hover:shadow-cyan-500/30 hover:scale-105 transition-all duration-300"
@@ -131,7 +131,7 @@ export default function Hero() {
           </div>
 
           {/* ACHIEVEMENT CARDS */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 xl:gap-6 mt-10 md:mt-12 relative z-20">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 xl:gap-6 mt-8 md:mt-10 relative z-20">
             {/* Card 1: Virtusa */}
             <div className="group relative overflow-hidden rounded-2xl md:rounded-3xl bg-white/[0.02] border border-white/[0.05] p-6 xl:p-8 transition-all duration-500 hover:-translate-y-2 hover:bg-white/[0.04] hover:border-cyan-500/30 hover:shadow-[0_0_40px_rgba(34,211,238,0.12)]">
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
