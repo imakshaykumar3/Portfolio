@@ -7,6 +7,7 @@ export default function About() {
     <section id="about" className="section-padding">
       <div className="section-container">
         <FadeIn>
+          
           <p className="eyebrow mb-4">About</p>
         </FadeIn>
 

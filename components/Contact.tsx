@@ -1,65 +1,145 @@
-// Components/Contact.tsx
 "use client";
 
-import { useState } from "react";
-import { Github, Linkedin, Copy, Check, MapPin, Code2, Component } from "lucide-react";
+import { useState, FormEvent } from "react";
+import { Send } from "lucide-react";
+
 import FadeIn from "@/components/FadeIn";
-import Button from "@/components/ui/Button";
-import { CONTACT, PROFILE } from "@/lib/data";
 
 export default function Contact() {
-  const [copied, setCopied] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-  async function copyEmail() {
-    try {
-      await navigator.clipboard.writeText(CONTACT.email);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch {
-      // clipboard API unavailable — fail silently, email is still visible as text
-    }
-  }
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+    // Add your submission logic here
+  };
 
   return (
-    <section id="contact" className="section-padding border-t border-border">
+    <section 
+      id="contact" 
+      className="py-12 md:py-16 border-t border-border bg-transparent" 
+    >
       <div className="section-container">
         <FadeIn>
-          <div className="card-surface relative overflow-hidden p-10 text-center md:p-16">
-            <div className="pointer-events-none absolute inset-0 bg-gradient-radial-fade" />
-            <div className="relative">
-              <p className="eyebrow mb-4">Contact</p>
-              <h2 className="mx-auto mb-4 max-w-xl font-display text-3xl font-semibold md:text-4xl">
-                Let&apos;s talk about what you&apos;re building.
-              </h2>
-              <p className="mx-auto mb-2 flex items-center justify-center gap-1.5 text-sm text-secondary">
-                <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-cyan/60" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-accent-cyan" />
+          <div className="mx-auto w-full max-w-5xl">
+            
+            {/* TOP SECTION: Contacts Header & One-Line Phrase */}
+            <div className="mb-12 w-full">
+              {/* Section Indicator */}
+              <div className="mb-6 flex items-center gap-4">
+                <div className="h-[1px] w-12 bg-cyan-400/50"></div>
+                <span className="text-sm font-mono font-semibold uppercase tracking-[0.2em] text-cyan-400">
+                  Contacts
                 </span>
-                {PROFILE.availability}
-              </p>
-              <p className="mb-8 flex items-center justify-center gap-1.5 text-sm text-secondary">
-                <MapPin size={14} /> {PROFILE.location}
-              </p>
-
-              <div className="flex flex-wrap items-center justify-center gap-3">
-                <button
-                  onClick={copyEmail}
-                  className="glass glass-hover flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium"
-                >
-                  {copied ? <Check size={15} /> : <Copy size={15} />}
-                  {copied ? "Copied" : CONTACT.email}
-                </button>
-                <Button href={CONTACT.linkedin} target="_blank" variant="secondary">
-                  <Linkedin size={15} /> LinkedIn
-                </Button>
-                <Button href={CONTACT.github} target="_blank" variant="secondary">
-                  <Github size={15} /> GitHub
-                </Button>
-                <Button href={CONTACT.codolio} target="_blank" variant="secondary">
-                  <Code2 size={15} /> Codolio
-                </Button>
               </div>
+              
+              {/* One-Line Phrase */}
+              <h3 className="text-2xl md:text-3xl font-light text-white/80 md:whitespace-nowrap">
+                Great projects start with a conversation.
+              </h3>
+            </div>
+
+            {/* BOTTOM SECTION: Grid (Left Text / Right Form) */}
+            <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16 md:items-center">
+              
+              {/* Left Column */}
+              <div className="flex flex-col text-white">
+                <h2 className="font-display tracking-tight leading-[1.1]">
+                  <span className="block text-4xl md:text-5xl lg:text-[4rem] font-bold text-white">
+                    Let&apos;s build
+                  </span>
+                  <span className="block mt-1 text-4xl md:text-5xl lg:text-[4rem] font-bold text-white">
+                    something
+                  </span>
+                  <span className="block mt-3 text-4xl md:text-5xl lg:text-[4rem] font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent pb-2">
+                    exceptional.
+                  </span>
+                </h2>
+                
+                <p className="mt-8 max-w-sm text-sm md:text-base leading-relaxed text-white/60">
+                  I&apos;m currently looking for full-time AI/ML & Backend
+                  Engineering opportunities. My inbox is always open.
+                </p>
+              </div>
+
+              {/* Right Column: Form */}
+              <div className="w-full max-w-md mx-auto md:ml-auto md:mr-0 flex flex-col justify-center">
+                <form onSubmit={handleSubmit} className="flex flex-col gap-7">
+                  
+                  {/* Name Input */}
+                  <div className="group relative">
+                    <input
+                      id="name"
+                      type="text"
+                      required
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      className="peer w-full border-b border-white/20 bg-transparent py-2.5 text-sm text-white transition-colors focus:border-cyan-400 focus:outline-none placeholder-transparent"
+                      placeholder="Name"
+                    />
+                    <label 
+                      htmlFor="name" 
+                      className="absolute left-0 -top-3.5 text-xs text-white/50 transition-all cursor-text peer-placeholder-shown:top-2.5 peer-placeholder-shown:text-sm peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-cyan-400"
+                    >
+                      Name
+                    </label>
+                  </div>
+
+                  {/* Email Input */}
+                  <div className="group relative">
+                    <input
+                      id="email"
+                      type="email"
+                      required
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      className="peer w-full border-b border-white/20 bg-transparent py-2.5 text-sm text-white transition-colors focus:border-cyan-400 focus:outline-none placeholder-transparent"
+                      placeholder="Email"
+                    />
+                    <label 
+                      htmlFor="email" 
+                      className="absolute left-0 -top-3.5 text-xs text-white/50 transition-all cursor-text peer-placeholder-shown:top-2.5 peer-placeholder-shown:text-sm peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-cyan-400"
+                    >
+                      Email
+                    </label>
+                  </div>
+
+                  {/* Message Input */}
+                  <div className="group relative mt-1">
+                    <textarea
+                      id="message"
+                      required
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      className="min-h-[100px] w-full resize-none border-b border-white/20 bg-transparent py-2.5 text-sm text-white transition-colors peer focus:border-cyan-400 focus:outline-none placeholder-transparent"
+                      placeholder="Message"
+                    />
+                    <label 
+                      htmlFor="message" 
+                      className="absolute left-0 -top-3.5 text-xs text-white/50 transition-all cursor-text peer-placeholder-shown:top-2.5 peer-placeholder-shown:text-sm peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-cyan-400"
+                    >
+                      Message
+                    </label>
+                  </div>
+
+                  {/* Submit Button */}
+                  <div className="mt-3">
+                    <button
+                      type="submit"
+                      className="group inline-flex w-fit items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:opacity-90 hover:shadow-[0_0_20px_rgba(34,211,238,0.3)] focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-[#0B1120]"
+                    >
+                      Submit
+                      <Send size={16} className="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
+                    </button>
+                  </div>
+
+                </form>
+              </div>
+
             </div>
           </div>
         </FadeIn>
