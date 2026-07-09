@@ -33,7 +33,11 @@ import {
   FaMicrochip,
   FaNetworkWired,
   FaCode,
+  FaKey,
+  FaExchangeAlt,
   FaLayerGroup,
+  FaBolt,
+  FaCube,
 } from "react-icons/fa";
 
 const SKILLS = [
@@ -72,12 +76,45 @@ const SKILLS = [
   },
 
   {
-    category: "Backend Development",
-    skills: [
-      { name: "FastAPI", icon: SiFastapi, color: "#009688" },
-      { name: "REST APIs", icon: FaServer, color: "#3B82F6" },
-    ],
-  },
+  category: "Backend Development",
+  skills: [
+    {
+      name: "FastAPI",
+      icon: SiFastapi,
+      color: "#009688",
+    },
+    {
+      name: "REST APIs",
+      icon: FaServer,
+      color: "#3B82F6",
+    },
+    {
+      name: "Microservices",
+      icon: FaProjectDiagram,
+      color: "#A855F7",
+    },
+    {
+      name: "JWT Authentication",
+      icon: FaKey,
+      color: "#F59E0B",
+    },
+    {
+      name: "WebSockets",
+      icon: FaExchangeAlt,
+      color: "#06B6D4",
+    },
+    {
+      name: "Async Programming",
+      icon: FaBolt,
+      color: "#10B981",
+    },
+    {
+      name: "Pydantic",
+      icon: FaCube,
+      color: "#EC4899",
+    },
+  ],
+},
 
   {
     category: "Machine Learning",
@@ -141,9 +178,12 @@ export default function Skills() {
       <div className="section-container">
 
         <FadeIn>
-          <h2 className="mb-5 text-center font-display text-4xl font-bold md:text-5xl text-white">
-            Technical Skills
-          </h2>
+          <h2 className="font-display text-5xl md:text-6xl font-black uppercase tracking-wider text-center">
+  Technical{" "}
+  <span className="text-[#A855F7]">
+    Skills
+  </span>
+</h2>
         </FadeIn>
         {SKILLS.map((group, groupIndex) => (
         <FadeIn key={group.category} delay={groupIndex * 0.1}>
