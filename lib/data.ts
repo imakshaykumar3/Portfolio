@@ -44,6 +44,7 @@ export const EXPERIENCE = [
     role: "Agentic AI Engineer Intern",
     location: "Hyderabad, Telangana",
     period: "Mar 2026 – May 2026",
+    logo: "/images/virtusa-logo.svg", 
     bullets: [
       "Developed stateful multi-agent AI pipelines using LangGraph and LangChain to automate compliance monitoring and policy enforcement workflows, reducing manual review effort by 8+ hours per week.",
       "Architected the generative AI reasoning layer of an agentic backend system, processing 500+ unstructured policy documents and reducing policy breach response time by 35% through risk-classified remediation workflows.",
@@ -56,12 +57,26 @@ export const EXPERIENCE = [
     role: "Artificial Intelligence Intern",
     location: "Jamshedpur, Jharkhand",
     period: "Jun 2025 – Jul 2025",
+    logo: "/images/tata-steel.svg", 
     bullets: [
       "Built and deployed a production-ready Automatic Vehicle Recognition System (AVRS) on AWS within Tata Steel's production network using YOLOv8 and PaddleOCR, enabling real-time license plate recognition with 90%+ accuracy for automated gate security access control.",
       "Integrated the deployed inference pipeline with PostgreSQL to automate Employee vs. Visitor classification, reducing manual gate verification time by 40% and eliminating manual log entries across daily operations.",
     ],
     tech: ["YOLOv8", "PaddleOCR", "AWS", "PostgreSQL"],
   },
+  // --- ADDED YOUR 3RD INTERNSHIP BELOW ---
+  {
+    company: "Surusha Technology Pvt. Ltd.",
+    role: "Software Engineer Intern",
+    location: "Remote",
+    period: "Dec 2023 – Jun 2024",
+    logo: "/images/surusha.png", // Make sure to add a generic or actual logo to your public folder!
+    bullets: [
+      "Architected a responsive, cross-platform frontend interface for an EdTech application, optimizing layout structures to streamline user navigation and engagement.",
+      "Engineered automated web scraping pipelines to extract high-volume e-commerce data, accelerating inventory synchronization and powering downstream business analytics."
+    ],
+    tech: ["Frontend Development", "Web Scraping", "UI/UX Design", "Data Extraction"],
+  }
 ];
 
 export const PROJECTS = [
