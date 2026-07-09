@@ -9,6 +9,7 @@ import Contact from "@/components/Contact";
 // app/page.tsx
 import Footer from "@/components/Footer";
 import Certifications from "@/components/Certifications";
+import Education from "@/components/Education";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <Experience />
         <Projects />
         <Skills />
+        <Education />
         <Achievements />
         <Certifications />
         <Contact />

@@ -33,6 +33,7 @@ export const NAV_LINKS = [
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
+  { label: "Education", href: "#education" },
   { label: "Achievements", href: "#achievements" },
   { label: "Certifications", href: "#certifications" }, 
   { label: "Let's Connect", href: "#contact" },
@@ -64,13 +65,12 @@ export const EXPERIENCE = [
     ],
     tech: ["YOLOv8", "PaddleOCR", "AWS", "PostgreSQL"],
   },
-  // --- ADDED YOUR 3RD INTERNSHIP BELOW ---
   {
     company: "Surusha Technology Pvt. Ltd.",
     role: "Software Engineer Intern",
     location: "Remote",
     period: "Dec 2023 – Jun 2024",
-    logo: "/images/surusha.png", // Make sure to add a generic or actual logo to your public folder!
+    logo: "/images/surusha.png", 
     bullets: [
       "Architected a responsive, cross-platform frontend interface for an EdTech application, optimizing layout structures to streamline user navigation and engagement.",
       "Engineered automated web scraping pipelines to extract high-volume e-commerce data, accelerating inventory synchronization and powering downstream business analytics."
@@ -201,14 +201,14 @@ export const ACHIEVEMENTS = [
   {
     tag: "Competitive Programming",
     title: "TCS CodeVita Season 13 — Global Rank 71",
-    logo: "/images/tcs-logo.svg", // <-- Added leading slash
+    logo: "/images/tcs-logo.svg", 
     description:
       "71st globally, top 0.05% among 146,922 participants, in the Guinness World Record-winning world's largest programming competition.",
   },
   {
     tag: "Hackathon",
     title: "IBM Expert Labs National Hackathon — Finalist",
-    logo: "/images/ibm-logo.svg", // <-- Added leading slash
+    logo: "/images/ibm-logo.svg", 
     description:
       "Shortlisted among the top teams from 200+ teams nationwide for developing an AI-powered cloud governance solution.",
   },
@@ -217,16 +217,39 @@ export const ACHIEVEMENTS = [
     tag: "HACKATHON",
     description:
       "Emerged as the Winner for Team MahaDevs in the Software category of the Internal Hackathon for Smart India Hackathon 2024 at Amity University Jharkhand.",
-    logo: "/images/sih-logo.jpg", // <-- Added leading slash
+    logo: "/images/sih-logo.jpg", 
   }
 ];
 
-export const EDUCATION = {
-  degree: "B.Tech, Computer Science & Engineering",
-  school: "Amity University, Ranchi, Jharkhand",
-  period: "Aug 2022 – Jun 2026",
-  gpa: "CGPA: 8.89 / 10.00",
-};
+export const EDUCATION = [
+  {
+    degree: "B.Tech, Computer Science & Engineering",
+    school: "Amity University",
+    location: "Ranchi, Jharkhand",
+    period: "Aug 2022 – Jun 2026",
+    score: "CGPA: 8.89 / 10.00",
+    logo: "/images/amity.png",
+    courses: ["Data Structures & Algorithms", "Object-Oriented Programming", "DBMS", "Computer Networks"], 
+  },
+  {
+    degree: "Higher Secondary (Science Stream)",
+    school: "St. John's Inter College",
+    location: "Ranchi, Jharkhand",
+    period: "Jul 2020 – Jun 2022",
+    score: "Percentage: 92.40% / 100.00%",
+    logo: "/images/st-johns.png", 
+    courses: ["Physics", "Chemistry", "Mathematics", "Computer Science"],
+  },
+  {
+    degree: "Matriculation",
+    school: "St. John's High School",
+    location: "Ranchi, Jharkhand",
+    period: "Jul 2020",
+    score: "Percentage: 91.00% / 100.00%",
+    logo: "/images/st-johns.png", 
+    courses: [],
+  },
+];
 
 export const CERTIFICATIONS = [
   {
@@ -239,7 +262,7 @@ export const CERTIFICATIONS = [
   {
     title: "Introduction to Large Language Models",
     issuer: "Google Cloud",
-    date: "2026", // Update with your specific completion date
+    date: "2025", 
     logo: "/images/google-cloud.svg", 
     description: "Fundamental certification covering the core concepts, architecture, and use cases of Large Language Models.",
   },
