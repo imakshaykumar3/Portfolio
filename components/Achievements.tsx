@@ -7,16 +7,17 @@ import Image from "next/image";
 export default function Achievements() {
   return (
     <section
-  id="achievements"
-  className="min-h-screen flex flex-col justify-center py-16 md:py-20 border-t border-white/5"
->
+      id="achievements"
+      className="section-padding border-t border-border"
+    >
       <div className="section-container">
         <FadeIn>
-          <p className="eyebrow mb-5">Achievements</p>
-
-          <h2 className="mb-16 w-full font-display text-4xl font-bold leading-tight text-white md:text-4xl lg:text-5xl lg:whitespace-nowrap">
-            Measured outcomes, not participation trophies.
+          <h2 className="mb-4 font-display text-4xl font-bold uppercase tracking-wider text-white md:text-5xl">
+            Key <span className="text-[#c4a5ff]">Achievements</span>
           </h2>
+          <p className="mb-14 font-display text-xl text-gray-400 md:text-2xl">
+            Measured outcomes, not participation trophies.
+          </p>
         </FadeIn>
 
         {/* Updated Grid Layout Here */}

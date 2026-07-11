@@ -178,12 +178,12 @@ export default function Skills() {
       <div className="section-container">
 
         <FadeIn>
-          <h2 className="font-display text-5xl md:text-6xl font-black uppercase tracking-wider text-center">
-  Technical{" "}
-  <span className="text-[#A855F7]">
-    Skills
-  </span>
-</h2>
+          <h2 className="mb-12 font-display text-5xl md:text-6xl font-black uppercase tracking-wider">
+            Technical{" "}
+            <span className="text-[#A855F7]">
+              Skills
+            </span>
+          </h2>
         </FadeIn>
         {SKILLS.map((group, groupIndex) => (
         <FadeIn key={group.category} delay={groupIndex * 0.1}>

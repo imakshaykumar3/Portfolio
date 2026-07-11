@@ -8,17 +8,16 @@ export default function Certifications() {
   return (
     <section
       id="certifications"
-      // Reduced top/bottom padding (py-12 md:py-16) to pull it up slightly
-      className="min-h-screen flex flex-col justify-center py-14 md:py-20 border-t border-white/5"
+      className="section-padding border-t border-border"
     >
       <div className="section-container">
         <FadeIn>
-          <p className="eyebrow mb-3">Certifications</p>
-
-          {/* Reduced margin-bottom (mb-10) to pull the grid up closer to the text */}
-          <h2 className="mb-10 w-full font-display text-4xl font-bold leading-tight text-white md:text-4xl lg:text-5xl lg:whitespace-nowrap">
-            Continuous learning & upskilling.
+          <h2 className="mb-3 font-display text-4xl font-bold uppercase tracking-wider text-white md:text-5xl">
+            Professional <span className="text-purple-400">Certifications</span>
           </h2>
+          <p className="mb-5 font-display text-xl text-gray-400 md:text-2xl">
+            Continuous learning & upskilling.
+          </p>
         </FadeIn>
 
         {/* Reduced the gap between cards from gap-6 to gap-4 */}

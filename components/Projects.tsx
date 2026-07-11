@@ -78,7 +78,7 @@ export default function Projects() {
         
         <FadeIn>
           <h2 className="font-display text-3xl font-bold uppercase tracking-wide text-white md:text-4xl lg:text-5xl pb-6">
-            FEATURED <span className="text-[#c4a5ff]">PROJECTS</span>
+            FEATURED <span className="text-purple-400">PROJECTS</span>
           </h2>
         </FadeIn>
 
