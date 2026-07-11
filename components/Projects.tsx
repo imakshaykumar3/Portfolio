@@ -72,7 +72,9 @@ export default function Projects() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-base/40 to-base pointer-events-none" />
 
       {/* Content Container */}
-      <div className="relative z-10 w-full mx-auto px-6 lg:px-16 2xl:px-24 pt-8 pb-20 min-h-[calc(100vh-6rem)] flex flex-col">
+      {/* <div className="relative z-10 w-full mx-auto px-6 lg:px-16 2xl:px-24 pt-8 pb-20 min-h-[calc(100vh-6rem)] flex flex-col"> */}
+      
+      <div className="relative z-10 w-full section-container pt-8 pb-20 min-h-[calc(100vh-6rem)] flex flex-col">
         
         <FadeIn>
           <h2 className="font-display text-3xl font-bold uppercase tracking-wide text-white md:text-4xl lg:text-5xl pb-6">

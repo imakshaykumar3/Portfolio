@@ -190,7 +190,7 @@ export const PROJECTS = [
     "SLF4J",
     "APACHE COMMONS CODEC"
   ],
-  github: "https://github.com/imakshaykumar3/your-repository",
+  github: "https://github.com/imakshaykumar3/Intelligent-File-Managemnet-System",
   image: "/images/ifms.png",
   diagram: "file-management",
 },
