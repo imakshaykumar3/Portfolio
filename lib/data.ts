@@ -84,37 +84,28 @@ export const PROJECTS = [
     slug: "sarthi-ai",
     name: "SARTHI.AI",
     subtitle: "Autonomous Agentic Travel Orchestration Intelligence",
-    description:
-      "A stateful multi-agent travel planning system where a 13-node LangGraph StateGraph routes between specialist agents, checkpoints memory across server restarts, and streams live recommendations to the client as they're generated.",
-    tech: [
-      "Python",
-      "LangGraph",
-      "LangChain",
-      "FastAPI",
-      "GPT-4",
-      "Gemini",
-      "SQLite",
-      "SSE",
-      "Pydantic",
-    ],
+    description: "An autonomous AI travel platform that orchestrates multiple AI agents to deliver intelligent, real-time travel planning through scalable backend architecture and live API integration.",
     bullets: [
-      "Orchestrated a stateful multi-agent travel system in LangGraph with a 13-node StateGraph and conditional routing, integrating AsyncSqliteSaver for checkpointing that persists memory across server reboots.",
-      "Engineered a scalable FastAPI microservice backend using Server-Sent Events (SSE), integrating Amadeus, Tavily, and Unsplash APIs with multi-LLM orchestration, structured outputs, and modular service design, enforcing structured outputs via Pydantic schemas and delivering sub-700ms response latency for live travel recommendations.",
+      "Built a 13-node autonomous multi-agent architecture that enables intelligent task delegation, memory persistence, and dynamic decision-making using LangGraph",
+      "Developed a high-performance FastAPI orchestration layer that streams AI responses in real time while integrating multiple LLMs and external travel intelligence services.",
+      "Delivered a production-ready AI system optimized for scalability, fault tolerance, and low-latency execution through asynchronous workflows, checkpoint recovery, and structured AI outputs.",
     ],
     metrics: [
       { value: "13", label: "StateGraph nodes" },
-      { value: "<700ms", label: "recommendation latency" },
-      { value: "2", label: "LLMs orchestrated" },
+      { value: "<700ms", label: "Recommendation latency" },
+      { value: "2", label: "LLMs orchestrated" }
     ],
-    diagram: "sarthi" as const,
-    github: "https://github.com/imakshaykumar3",
+    tech: ["PYTHON", "LANGGRAPH", "LANGCHAIN", "FASTAPI", "GPT-4", "GEMINI", "SQLITE", "SSE", "PYDANTIC"],
+    github: "https://github.com/imakshaykumar3/Sarthi.AI", 
+    image: "/images/sarthi-ai.png", 
+    diagram: "sarthi", 
   },
   {
     slug: "contextgpt",
     name: "ContextGPT",
     subtitle: "AI-Powered Meeting Intelligence Platform",
     description:
-      "A RAG-grounded meeting intelligence platform that transcribes audio, video, and YouTube sources, indexes them into a semantic retrieval layer, and answers questions about a meeting through a JWT-secured API.",
+      "Built an AI-powered meeting intelligence platform that transforms hours of conversations into searchable organizational knowledge. By combining state-of-the-art speech recognition, vector search, and Retrieval-Augmented Generation, the platform delivers accurate insights, summaries, and conversational answers with enterprise-grade security and performance.",
     tech: [
       "Python",
       "FastAPI",
@@ -126,8 +117,9 @@ export const PROJECTS = [
       "JWT",
     ],
     bullets: [
-      "Built a RAG-based meeting intelligence platform using Faster-Whisper for multi-modal transcription (audio, video, YouTube), reducing meeting note preparation time by 80% across 3 input modalities with a FastAPI pipeline.",
-      "Implemented a semantic retrieval layer using BAAI/bge-small-en-v1.5 embeddings in ChromaDB with LangChain-powered query rewriting and RAG-grounded answer generation, exposing JWT-secured REST APIs backed by PostgreSQL for session persistence.",
+      "Designed an end-to-end RAG architecture using LangChain, ChromaDB, and BAAI embeddings, enabling low-latency semantic retrieval and grounded AI responses.",
+      "Built a high-performance multi-modal ingestion pipeline supporting audio, video, and YouTube content with Faster-Whisper, reducing manual meeting documentation by 80%.",
+      "Developed production-ready FastAPI microservices with JWT authentication, PostgreSQL, and asynchronous APIs to deliver secure, scalable, and enterprise-ready AI workflows.",
     ],
     metrics: [
       { value: "80%", label: "less note-prep time" },
@@ -135,8 +127,73 @@ export const PROJECTS = [
       { value: "JWT", label: "secured API layer" },
     ],
     diagram: "contextgpt" as const,
-    github: "https://github.com/imakshaykumar3",
+    image: "/images/contextgpt.png",
+    github: "https://github.com/imakshaykumar3/ContextGPT",
   },
+  {
+    slug: "investify",
+    name: "Investify",
+    subtitle: "Full-Stack Investment & Portfolio Management Platform",
+    description:
+      "A modern full-stack investment platform that delivers real-time market insights, portfolio tracking, and secure trading workflows through a scalable Spring Boot backend and responsive React frontend.",
+    bullets: [
+      "Engineered scalable Spring Boot REST APIs to power secure portfolio management, watchlists, and real-time financial data integration with clean backend architecture.",
+      "Developed a responsive React and Tailwind CSS dashboard featuring interactive market analytics, portfolio tracking, watchlists, and an optimized cross-device user experience.",
+      "Designed a production-ready full-stack application with modular architecture, seamless frontend-backend communication, and maintainable code following modern software engineering practices.",
+    ],
+    metrics: [
+      { value: "100%", label: "Responsive UI" },
+      { value: "REST", label: "API Architecture" },
+      { value: "Full Stack", label: "Web Application" }
+    ],
+    tech: [
+      "JAVA",
+      "SPRING BOOT",
+      "REACT",
+      "TAILWIND CSS",
+      "REST APIs",
+      "SPRING SECURITY",
+      "JWT",
+      "MYSQL",
+      "MAVEN",
+      "LOMBOK"
+    ],
+    github: "https://github.com/imakshaykumar3/Investify",
+    image: "/images/investify.png",
+    diagram: "investify",
+  },
+  {
+  slug: "intelligent-file-management",
+  name: "Intelligent File Management System",
+  subtitle: "AI-Inspired Duplicate Detection & Smart Storage Management",
+  description:
+    "A full-stack file management platform that intelligently detects duplicate files, automates storage optimization, and provides secure file lifecycle management through a scalable Spring Boot backend and React frontend.",
+  bullets: [
+    "Engineered a high-performance duplicate detection engine using SHA-256 hashing and Levenshtein similarity, achieving over 95% detection accuracy while identifying redundant files and empty directories.",
+    "Developed secure Spring Boot REST APIs powering file uploads, previews, categorization, activity tracking, and deletion workflows with seamless React integration.",
+    "Built a responsive React and Tailwind CSS interface with real-time file management, metadata visualization, and an intuitive user experience following clean architecture principles.",
+  ],
+  metrics: [
+    { value: "95%+", label: "Detection Accuracy" },
+    { value: "SHA-256", label: "Hash-Based Matching" },
+    { value: "REST", label: "API Architecture" }
+  ],
+  tech: [
+    "JAVA",
+    "SPRING BOOT",
+    "REACT",
+    "TAILWIND CSS",
+    "REST APIs",
+    "SHA-256",
+    "LEVENSHTEIN",
+    "LOMBOK",
+    "SLF4J",
+    "APACHE COMMONS CODEC"
+  ],
+  github: "https://github.com/imakshaykumar3/your-repository",
+  image: "/images/ifms.png",
+  diagram: "file-management",
+},
 ];
 
 export const SKILLS = [
