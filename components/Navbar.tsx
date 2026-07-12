@@ -3,6 +3,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
 import { Menu, X, Download } from "lucide-react";
 
@@ -80,9 +81,16 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href="#top"
-            className="font-display text-xl font-bold tracking-tight text-white transition-colors hover:text-cyan-400 py-5"
+            className="flex items-center transition-transform hover:scale-105 py-3"
           >
-            Akshay<span className="text-cyan-400">.</span>
+            <Image 
+              src="/images/logo2.png" 
+              alt="AK Logo" 
+              width={65} 
+              height={65} 
+              className="object-contain"
+              priority 
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -126,7 +134,7 @@ export default function Navbar() {
           {/* Gradient Resume Button */}
           <div className="hidden lg:block">
             <Button
-              href="/resume.pdf"
+              href="/document/Akshay Kumar.pdf"
               download
               className="group flex h-9 items-center gap-2 rounded-full bg-gradient-to-r from-indigo-500 to-cyan-500 px-5 text-[13px] font-medium text-white shadow-lg shadow-cyan-500/20 transition-all duration-300 hover:scale-105 hover:shadow-cyan-500/40"
             >
@@ -180,7 +188,7 @@ export default function Navbar() {
               
               <li className="pt-2">
                 <Button
-                  href="/resume.pdf"
+                  href="/document/Akshay Kumar.pdf"
                   download
                   onClick={() => setOpen(false)}
                   className="flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-indigo-500 to-cyan-500 py-3 text-[14px] font-medium text-white shadow-lg shadow-cyan-500/20 transition-all hover:opacity-90"

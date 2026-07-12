@@ -8,6 +8,7 @@ import {
   Orbitron,
 } from "next/font/google";
 import "./globals.css";
+import Image from "next/image";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -41,7 +42,7 @@ const SITE_URL = "https://akshaykumar.dev";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Akshay Kumar — AI Platform & Backend Engineer",
+    default: "Akshay Kumar — Software Developer & AI Engineer",
     template: "%s | Akshay Kumar",
   },
   description:
@@ -88,7 +89,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/images/logo2.png",
   },
 };
 

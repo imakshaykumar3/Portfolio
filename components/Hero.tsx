@@ -111,7 +111,6 @@ export default function Hero() {
           </div>
 
           {/* CTA BUTTONS */}
-         {/* CTA BUTTONS */}
           <div className="mt-0 md:mt-0 flex flex-wrap gap-2.5 xl:gap-3 items-center">
             <Button
               href="#projects"
@@ -168,7 +167,7 @@ export default function Hero() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-slate-100 tracking-tight">Global Rank 71</h3>
-                    <p className="text-sm font-semibold text-blue-400">TCS CodeVita Season 13</p>
+                    <p className="text-sm font-semibold text-cyan-400">TCS CodeVita Season 13</p>
                   </div>
                 </div>
                 <p className="text-sm text-slate-400 leading-relaxed text-justify">Secured the top 0.05% position globally out of 146,922 participants in the world's largest programming competition.</p>
@@ -185,7 +184,7 @@ export default function Hero() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-slate-100 tracking-tight">Finalist</h3>
-                    <p className="text-sm font-semibold text-purple-400">IBM Expert Labs Hackathon</p>
+                    <p className="text-sm font-semibold text-cyan-400">IBM Expert Labs Hackathon</p>
                   </div>
                 </div>
                 <p className="text-sm text-slate-400 leading-relaxed text-justify">Shortlisted among the top tier nationwide for developing an AI-powered enterprise cloud governance solution.</p>
