@@ -63,17 +63,18 @@ export default function Projects() {
   return (
     <section id="projects" className="relative overflow-hidden border-t border-border scroll-mt-16">
       
-      {/* Background Layers */}
+      {/* BACKGROUND ANIMATION LAYER */}
       <div className="absolute inset-0 pointer-events-none">
         <AgentGraphBackground />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(34,211,238,.12),transparent_35%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(99,102,241,.10),transparent_35%)]" />
+        {/* Glows: Purple top-right (matching text), Cyan bottom-left */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(168,85,247,.10),transparent_35%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(34,211,238,.12),transparent_35%)]" />
+        
+        {/* Vignette blend to smoothly fade into sections above/below */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0B1120]/80 via-transparent to-[#0B1120]/80" />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-base/40 to-base pointer-events-none" />
 
       {/* Content Container */}
-      {/* <div className="relative z-10 w-full mx-auto px-6 lg:px-16 2xl:px-24 pt-8 pb-20 min-h-[calc(100vh-6rem)] flex flex-col"> */}
-      
       <div className="relative z-10 w-full section-container pt-8 pb-20 min-h-[calc(100vh-6rem)] flex flex-col">
         
         <FadeIn>

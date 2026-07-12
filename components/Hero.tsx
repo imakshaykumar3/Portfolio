@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight, Github, Linkedin, Code2 } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Code2, Mail } from "lucide-react";
 
 import { PROFILE, CONTACT } from "@/lib/data";
 import Button from "@/components/ui/Button";
@@ -26,8 +26,8 @@ export default function Hero() {
       id="top"
       className="relative min-h-screen overflow-hidden flex items-center pt-24 pb-16 lg:pb-24"
     >
-      {/* BACKGROUND */}
-      <div className="absolute inset-0">
+      {/* BACKGROUND ANIMATION LAYER - Added pointer-events-none for consistency */}
+      <div className="absolute inset-0 pointer-events-none">
         <AgentGraphBackground />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(34,211,238,.12),transparent_35%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(99,102,241,.10),transparent_35%)]" />
@@ -111,6 +111,7 @@ export default function Hero() {
           </div>
 
           {/* CTA BUTTONS */}
+         {/* CTA BUTTONS */}
           <div className="mt-0 md:mt-0 flex flex-wrap gap-2.5 xl:gap-3 items-center">
             <Button
               href="#projects"
@@ -119,14 +120,22 @@ export default function Hero() {
               Explore Projects
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
             </Button>
+            
             <Button href={CONTACT.github} target="_blank" variant="secondary" className="px-4 xl:px-5 py-3.5 rounded-2xl text-sm xl:text-base !text-slate-200 hover:!text-white">
               <Github size={16} /> GitHub
             </Button>
+            
             <Button href={CONTACT.linkedin} target="_blank" variant="secondary" className="px-4 xl:px-5 py-3.5 rounded-2xl text-sm xl:text-base !text-slate-200 hover:!text-white">
               <Linkedin size={16} /> LinkedIn
             </Button>
+            
             <Button href={CONTACT.codolio} target="_blank" variant="secondary" className="px-4 xl:px-5 py-3.5 rounded-2xl text-sm xl:text-base !text-slate-200 hover:!text-white">
               <Code2 size={16} /> Codolio
+            </Button>
+
+            {/* NEW EMAIL BUTTON */}
+            <Button href={`mailto:${CONTACT.email}`} variant="secondary" className="px-4 xl:px-5 py-3.5 rounded-2xl text-sm xl:text-base !text-slate-200 hover:!text-white">
+              <Mail size={16} /> Email
             </Button>
           </div>
 

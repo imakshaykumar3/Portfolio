@@ -4,6 +4,7 @@ import { useState, FormEvent } from "react";
 import { Send } from "lucide-react";
 
 import FadeIn from "@/components/FadeIn";
+import AgentGraphBackground from "@/components/AgentGraphBackground";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -21,19 +22,32 @@ export default function Contact() {
   return (
     <section 
       id="contact" 
-      className="section-padding border-t border-border bg-transparent" 
+      /* Added relative and overflow-hidden to contain the absolute background */
+      className="relative overflow-hidden pt-24 pb-8 border-t border-border bg-transparent" 
     >
-      <div className="section-container">
+      {/* BACKGROUND ANIMATION LAYER */}
+      <div className="absolute inset-0 pointer-events-none">
+        <AgentGraphBackground />
+        {/* Adjusted glows for variety: Indigo top-left, Cyan bottom-right */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(99,102,241,.10),transparent_35%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(34,211,238,.12),transparent_35%)]" />
+        
+        {/* Optional: Vignette blend to smoothly fade into sections above/below */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0B1120]/80 via-transparent to-[#0B1120]/80" />
+      </div>
+
+      {/* MAIN CONTENT WRAPPER - Added relative and z-10 */}
+      <div className="section-container relative z-10">
         <FadeIn>
           <h2 className="mb-4 font-display text-4xl font-bold uppercase tracking-wider text-white md:text-5xl">
             Let&apos;s <span className="text-purple-400">Connect</span>
           </h2>
-          <p className="mb-14 font-display text-xl text-gray-400 md:text-2xl">
+          <p className="mb-9 font-display text-xl text-gray-400 md:text-2xl">
             Great projects start with a conversation.
           </p>
 
           {/* BOTTOM SECTION: Grid (Left Text / Right Form) */}
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-12 xl:gap-24 lg:items-center mt-8">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-12 xl:gap-24 lg:items-center mt-2">
             
             {/* Left Column */}
             <div className="flex flex-col text-white min-w-0">
@@ -45,7 +59,7 @@ export default function Contact() {
                   something
                 </span>
                 <span className="block mt-2 text-4xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent pb-2">
-                  exceptional.
+                  exceptional !
                 </span>
               </h2>
               
@@ -55,7 +69,7 @@ export default function Contact() {
               </p>
             </div>
 
-            {/* Right Column: Form (Removed the classes pushing it to the far right!) */}
+            {/* Right Column: Form */}
             <div className="w-full max-w-md flex flex-col justify-center">
               <form onSubmit={handleSubmit} className="flex flex-col gap-7">
                 

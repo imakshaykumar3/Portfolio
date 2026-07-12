@@ -6,6 +6,7 @@ import FadeIn from "@/components/FadeIn";
 import Badge from "@/components/ui/Badge";
 import { EXPERIENCE } from "@/lib/data";
 import { motion, useScroll, useTransform } from "framer-motion";
+import AgentGraphBackground from "@/components/AgentGraphBackground";
 
 // --- SUB-COMPONENT FOR INDIVIDUAL JOB ITEMS ---
 function ExperienceItem({ job, index }: { job: typeof EXPERIENCE[0]; index: number }) {
@@ -102,8 +103,24 @@ export default function Experience() {
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section id="experience" className="section-padding border-t border-border">
-      <div className="section-container">
+    <section 
+      id="experience" 
+      /* Added relative and overflow-hidden to contain the background */
+      className="relative overflow-hidden section-padding border-t border-border"
+    >
+      {/* BACKGROUND ANIMATION LAYER */}
+      <div className="absolute inset-0 pointer-events-none">
+        <AgentGraphBackground />
+        {/* Glows: Indigo top-left, Cyan bottom-right for variety */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(99,102,241,.10),transparent_35%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(34,211,238,.10),transparent_35%)]" />
+        
+        {/* Vignette blend to smoothly fade into sections above/below */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0B1120]/80 via-transparent to-[#0B1120]/80" />
+      </div>
+
+      {/* MAIN CONTENT WRAPPER - Added relative and z-10 */}
+      <div className="section-container relative z-10">
         
         <FadeIn>
           <h2 className="mb-4 font-display text-4xl font-bold uppercase tracking-wider text-primary md:text-5xl">

@@ -1,5 +1,6 @@
 // components/About.tsx
 import FadeIn from "@/components/FadeIn";
+import AgentGraphBackground from "@/components/AgentGraphBackground";
 
 export default function About() {
   const aboutCards = [
@@ -26,13 +27,25 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="section-padding relative overflow-hidden">
-      {/* Background Ambient Glow */}
-      <div className="absolute left-1/2 top-1/2 -z-10 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-600/10 blur-[120px] pointer-events-none"></div>
+    <section 
+      id="about" 
+      /* Added border-t border-border for consistency with other sections */
+      className="section-padding relative overflow-hidden border-t border-border"
+    >
+      {/* BACKGROUND ANIMATION LAYER */}
+      <div className="absolute inset-0 pointer-events-none">
+        <AgentGraphBackground />
+        {/* Glows: Purple top-left (matching text), Cyan bottom-right */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(168,85,247,.10),transparent_35%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(34,211,238,.10),transparent_35%)]" />
+        
+        {/* Vignette blend to smoothly fade into sections above/below */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0B1120]/80 via-transparent to-[#0B1120]/80" />
+      </div>
 
       <div className="section-container relative z-10">
         <FadeIn>
-          <h2 className="mb-12 text-3xl font-bold uppercase tracking-wide text-white md:text-4xl">
+          <h2 className="mb-8 font-display text-3xl font-bold uppercase tracking-wide text-white md:text-4xl">
             ABOUT <span className="text-purple-400">ME</span>
           </h2>
         </FadeIn>
