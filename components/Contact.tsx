@@ -5,6 +5,7 @@ import { Send } from "lucide-react";
 
 import FadeIn from "@/components/FadeIn";
 import AgentGraphBackground from "@/components/AgentGraphBackground";
+import { toast } from "sonner";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -13,12 +14,49 @@ export default function Contact() {
     message: "",
   });
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Add your submission logic here
-  };
+const [loading, setLoading] = useState(false);
 
+const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  setLoading(true);
+
+  try {
+    const response = await fetch("/api", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      toast.success("Message sent successfully! 🚀", {
+        description: "Thank you for reaching out. I'll get back to you soon.",
+      });
+
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+    } else {
+      toast.error("Failed to send message", {
+        description: "Please try again after a few moments.",
+      });
+    }
+  } catch (error) {
+    console.error(error);
+
+    toast.error("Something went wrong", {
+      description: "Please check your connection and try again.",
+    });
+  }
+
+  setLoading(false);
+};
   return (
     <section 
       id="contact" 
@@ -132,12 +170,52 @@ export default function Contact() {
                 {/* Submit Button */}
                 <div className="mt-3">
                   <button
-                    type="submit"
-                    className="group inline-flex w-fit items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:opacity-90 hover:shadow-[0_0_20px_rgba(34,211,238,0.3)] focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-[#0B1120]"
-                  >
-                    Submit
-                    <Send size={16} className="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
-                  </button>
+  type="submit"
+  disabled={loading}
+  className="group inline-flex w-fit items-center justify-center gap-2 rounded-xl
+             bg-gradient-to-r from-cyan-500 to-blue-500
+             px-8 py-3.5 text-sm font-semibold text-white
+             transition-all duration-300
+             hover:opacity-90
+             hover:shadow-[0_0_20px_rgba(34,211,238,0.3)]
+             disabled:cursor-not-allowed
+             disabled:opacity-70"
+>
+  {loading ? (
+    <>
+      <svg
+        className="h-4 w-4 animate-spin"
+        viewBox="0 0 24 24"
+        fill="none"
+      >
+        <circle
+          className="opacity-25"
+          cx="12"
+          cy="12"
+          r="10"
+          stroke="currentColor"
+          strokeWidth="4"
+        />
+        <path
+          className="opacity-75"
+          fill="currentColor"
+          d="M4 12a8 8 0 018-8V0C5.373
+          0 0 5.373 0 12h4z"
+        />
+      </svg>
+
+      Sending...
+    </>
+  ) : (
+    <>
+      Submit
+      <Send
+        size={16}
+        className="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
+      />
+    </>
+  )}
+</button>
                 </div>
 
               </form>

@@ -45,12 +45,12 @@ export default function Certifications() {
                     flex
                     flex-col
                     h-full
-                    gap-4 /* Slightly tighter gap between logo and text */
+                    gap-4 
                     rounded-3xl
                     border
                     border-white/10
                     bg-white/[0.03]
-                    p-5 /* Reduced inner padding from p-6 to p-5 */
+                    p-5 
                     transition-all
                     duration-300
                     hover:-translate-y-1

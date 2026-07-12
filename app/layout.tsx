@@ -7,8 +7,10 @@ import {
   JetBrains_Mono,
   Orbitron,
 } from "next/font/google";
+// @ts-ignore - allow importing global CSS without module declarations in this environment
 import "./globals.css";
-import Image from "next/image";
+import { Toaster } from "sonner";
+
 
 const inter = Inter({
   subsets: ["latin"],
@@ -144,6 +146,12 @@ export default function RootLayout({
           Skip to main content
         </a>
         {children}
+        <Toaster
+          position="top-right"
+          richColors
+          closeButton
+          duration={3000}
+        />
       </body>
     </html>
   );
