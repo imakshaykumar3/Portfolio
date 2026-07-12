@@ -1,7 +1,8 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+// Removed useSpring from imports to match the Experience section
+import { motion, useScroll, useTransform } from "framer-motion";
 import FadeIn from "@/components/FadeIn";
 import ProjectCard from "@/components/ProjectCard";
 import { PROJECTS } from "@/lib/data";
@@ -52,13 +53,8 @@ export default function Projects() {
     offset: ["start center", "end center"],
   });
 
-  const scaleY = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 10,
-    restDelta: 0.001,
-  });
-
-  const lineHeight = useTransform(scaleY, [0, 1], ["0%", "100%"]);
+  // Exactly like your Experience section - no spring, just a direct 1:1 map
+  const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
     <section id="projects" className="relative overflow-hidden border-t border-border scroll-mt-16">

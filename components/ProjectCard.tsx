@@ -121,27 +121,22 @@ export default function ProjectCard({
         {/* Left Side: Gradient Box */}
         <div className="flex h-full w-full flex-col justify-center overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-[#3c387d] via-[#433b8a] to-[#27397c] p-3 sm:p-7 lg:col-span-7">
 
-          {project.image ? (
-            <div className="relative w-full overflow-hidden rounded-xl border border-white/10 bg-[#1e1e1e] shadow-2xl">
-              <div className="flex items-center gap-1.5 bg-[#2d2d2d] px-4 py-3">
-                <div className="h-3 w-3 rounded-full bg-[#ff5f56]"></div>
-                <div className="h-3 w-3 rounded-full bg-[#ffbd2e]"></div>
-                <div className="h-3 w-3 rounded-full bg-[#27c93f]"></div>
-              </div>
-              <Image
-                src={project.image}
-                alt={`${project.name} interface`}
-                width={1920}
-                height={1080}
-                quality={100}
-                className="block h-auto w-full object-cover"
-              />
+          <div className="relative w-full overflow-hidden rounded-xl border border-white/10 bg-[#1e1e1e] shadow-2xl">
+            <div className="flex items-center gap-1.5 bg-[#2d2d2d] px-4 py-3">
+              <div className="h-3 w-3 rounded-full bg-[#ff5f56]"></div>
+              <div className="h-3 w-3 rounded-full bg-[#ffbd2e]"></div>
+              <div className="h-3 w-3 rounded-full bg-[#27c93f]"></div>
             </div>
-          ) : (
-            <div className="flex h-full w-full items-center justify-center rounded-xl bg-base-elevated/40 p-4">
-              <ArchitectureDiagram type={project.diagram} />
-            </div>
-          )}
+
+            <Image
+              src={project.image!}
+              alt={`${project.name} interface`}
+              width={1920}
+              height={1080}
+              quality={100}
+              className="block h-auto w-full object-cover"
+            />
+          </div>
         </div>
 
         {/* Right Side: Text Content */}
