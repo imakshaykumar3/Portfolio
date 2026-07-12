@@ -7,7 +7,6 @@ import {
   JetBrains_Mono,
   Orbitron,
 } from "next/font/google";
-// @ts-ignore - allow importing global CSS without module declarations in this environment
 import "./globals.css";
 import { Toaster } from "sonner";
 

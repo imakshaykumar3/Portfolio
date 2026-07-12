@@ -170,7 +170,7 @@ export default function Hero() {
                     <p className="text-sm font-semibold text-cyan-400">TCS CodeVita Season 13</p>
                   </div>
                 </div>
-                <p className="text-sm text-slate-400 leading-relaxed text-justify">Secured the top 0.05% position globally out of 146,922 participants in the world's largest programming competition.</p>
+                <p className="text-sm text-slate-400 leading-relaxed text-justify">Secured the top 0.05% position globally out of 146,922 participants in the world&apos;s largest programming competition.</p>
               </div>
             </div>
 

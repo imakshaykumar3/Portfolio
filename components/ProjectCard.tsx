@@ -94,11 +94,21 @@ const renderTechIcon = (tech: string) => {
   return <Bot className="h-3.5 w-3.5 text-gray-400" />;
 };
 
+interface Project {
+  name: string;
+  description: string;
+  image?: string;
+  diagram?: string;
+  github?: string;
+  bullets: string[];
+  tech: string[];
+}
+
 export default function ProjectCard({
   project,
   reversed = false,
 }: {
-  project: any; 
+  project: Project;
   reversed?: boolean;
 }) {
   return (
