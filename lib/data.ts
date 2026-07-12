@@ -159,7 +159,7 @@ export const PROJECTS = [
       "LOMBOK"
     ],
     github: "https://github.com/imakshaykumar3/Investify",
-    image: "/images/investify.png",
+    image: "/images/Investify.png",
     diagram: "investify",
   },
   {
